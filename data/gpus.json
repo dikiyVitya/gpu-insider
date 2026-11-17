@@ -1,0 +1,85 @@
+
+{
+  "families": [
+    {
+      "id": "gtx",
+      "name": "GeForce GTX",
+      "generations": [
+        {
+          "id": "16-series",
+          "name": "16 Series",
+          "models": [
+            {
+              "id": "gtx-1660-super",
+              "name": "GeForce GTX 1660 SUPER",
+              "manufacturer": "NVIDIA",
+              "architecture": "Turing",
+              "memory": "6 GB GDDR6",
+
+              "description": "NVIDIA GeForce GTX 1660 SUPER — игровая видеокарта на архитектуре Turing.",
+
+              "boards": [
+                {
+                  "id": "msi-gaming-x",
+                  "manufacturer": "MSI",
+                  "edition": "Gaming X",
+                  "fullName": "MSI GeForce GTX 1660 SUPER Gaming X",
+                  "fans": 2,
+                    "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/msi/gaming-x/front.webp",
+                    "gallery": [
+                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/front.webp",
+                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/back.webp",
+                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/left.webp",
+                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/box.webp"
+                    ]
+                    },
+                  "description": "Исполнение Gaming X от MSI с фирменной системой охлаждения."
+                },
+
+                {
+                  "id": "msi-ventus-xs",
+                  "manufacturer": "MSI",
+                  "edition": "Ventus XS OC",
+                  "fullName": "MSI GeForce GTX 1660 SUPER Ventus XS OC",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/msi/ventus-xs-front.webp",
+                    "gallery": []
+                  },
+                  "description": "Компактное исполнение Ventus XS OC."
+                },
+
+                {
+                  "id": "asus-dual-evo",
+                  "manufacturer": "ASUS",
+                  "edition": "Dual EVO OC",
+                  "fullName": "ASUS Dual GeForce GTX 1660 SUPER EVO OC",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/asus/dual-evo-front.webp",
+                    "gallery": []
+                  },
+                  "description": "Исполнение Dual EVO OC от ASUS."
+                },
+
+                {
+                  "id": "gigabyte-gaming-oc",
+                  "manufacturer": "Gigabyte",
+                  "edition": "Gaming OC",
+                  "fullName": "Gigabyte GeForce GTX 1660 SUPER Gaming OC 6G",
+                  "fans": 3,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/gigabyte/gaming-oc-front.webp",
+                    "gallery": []
+                  },
+                  "description": "Трёхвентиляторное исполнение Gaming OC."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

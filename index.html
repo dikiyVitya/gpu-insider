@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU INSIDER — Мир видеокарт</title>
+    <link rel="icon" type="image/png" href="assets/branding/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo" aria-label="GPU INSIDER — главная">
+                <img src="assets/branding/logo.png" alt="GPU INSIDER">
+            </a>
+            <nav class="navigation">
+                <a href="#">Главная</a>
+                <a href="#articles">Статьи</a>
+                <a href="#hardware">Видеокарты</a>
+                <a href="#about">О проекте</a>
+            </nav>
+            <div class="header-label">HARDWARE / TECHNOLOGY</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag">ТВОЙ ПУТЕВОДИТЕЛЬ В МИРЕ GPU</span>
+                    <h1>БОЛЬШЕ,<br>ЧЕМ ПРОСТО<br><span>ГРАФИКА.</span></h1>
+                    <p>Исследуем технологии, разбираемся в железе и рассказываем о мире современных видеокарт.</p>
+                    <a href="#articles" class="hero-button">ИЗУЧИТЬ МАТЕРИАЛЫ →</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=1200" alt="Компьютерное оборудование">
+                </div>
+            </div>
+        </section>
+
+        <section class="articles" id="articles">
+            <div class="container">
+                <div class="section-heading">
+                    <span>01 / KNOWLEDGE BASE</span>
+                    <h2>ПОСЛЕДНИЕ МАТЕРИАЛЫ</h2>
+                </div>
+                <div class="article-grid">
+                    <article class="article-card">
+                        <div class="article-number">01</div>
+                        <h3>Как устроена видеокарта?</h3>
+                        <p>Разбираемся, из чего состоит GPU и как он обрабатывает графику.</p>
+                        <a href="#">ЧИТАТЬ СТАТЬЮ →</a>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-number">02</div>
+                        <h3>NVIDIA против AMD</h3>
+                        <p>Два крупнейших игрока рынка. В чём их отличия?</p>
+                        <a href="#">ЧИТАТЬ СТАТЬЮ →</a>
+                    </article>
+                    <article class="article-card">
+                        <div class="article-number">03</div>
+                        <h3>Что такое Ray Tracing?</h3>
+                        <p>Как работает трассировка лучей и зачем она нужна в играх.</p>
+                        <a href="#">ЧИТАТЬ СТАТЬЮ →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-label">02 / ABOUT THE PROJECT</div>
+                <div class="about-content">
+                    <div class="about-title"><h2>МЫ ИЗУЧАЕМ<br><span>ЖЕЛЕЗО.</span></h2></div>
+                    <div class="about-description">
+                        <p>GPU INSIDER — независимый проект, посвящённый миру графических процессоров.</p>
+                        <p>Здесь мы разбираем видеокарты, изучаем архитектуры, сравниваем производителей и исследуем технологии, которые формируют современную компьютерную графику.</p>
+                        <p class="about-placeholder">ЛОЛ КЕК ЧЕБУРЕК. СОДЕРЖАНИЕ БУДЕТ ДОБАВЛЕНО ПОЗЖЕ.</p>
+                    </div>
+                </div>
+                <div class="about-bottom">
+                    <span>INDEPENDENT HARDWARE PROJECT</span>
+                    <span>EST. 2026</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="hardware" id="hardware" data-vendor="">
+            <div class="container">
+                <div class="vendor-picker">
+                    <div class="vendor-picker-heading">
+                        <h3>ВЫБЕРИ ПРОИЗВОДИТЕЛЯ</h3>
+                        <p>Начни исследование мира видеокарт</p>
+                    </div>
+                    <div class="vendor-buttons" role="group" aria-label="Выбор производителя GPU">
+                        <button class="vendor-button vendor-button-nvidia" type="button" data-vendor="nvidia" aria-pressed="false">
+                            <span class="vendor-wordmark">NVIDIA</span>
+                            <span class="vendor-subtitle">GEFORCE</span>
+                        </button>
+                        <button class="vendor-button vendor-button-amd" type="button" data-vendor="amd" aria-pressed="false">
+                            <span class="vendor-wordmark">AMD</span>
+                            <span class="vendor-subtitle">RADEON</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="catalog" id="gpu-catalog" aria-live="polite">
+                    <div class="catalog-step" id="family-step">
+                        <label for="gpu-family">01 / СЕМЕЙСТВО</label>
+                        <select id="gpu-family" disabled>
+                            <option value="">Сначала выбери NVIDIA или AMD</option>
+                        </select>
+                    </div>
+                    <div class="catalog-step" id="generation-step">
+                        <label for="gpu-generation">02 / ПОКОЛЕНИЕ</label>
+                        <select id="gpu-generation" disabled>
+                            <option value="">Сначала выбери семейство</option>
+                        </select>
+                    </div>
+                    <div class="catalog-step" id="model-step">
+                        <label for="gpu-model">03 / МОДЕЛЬ</label>
+                        <select id="gpu-model" disabled>
+                            <option value="">Сначала выбери поколение</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="gpu-result" id="gpu-result">
+                    <div class="gpu-result-number">GPU / 000</div>
+                    <h3>ТВОЯ ВИДЕОКАРТА ЖДЁТ ВЫБОРА</h3>
+                    <p>Выбери NVIDIA или AMD, а затем найди интересующую тебя модель.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <a href="#" class="logo" aria-label="GPU INSIDER — главная">
+                <img src="assets/branding/logo.png" alt="GPU INSIDER">
+            </a>
+                <nav class="footer-navigation">
+                    <a href="#">Главная</a>
+                    <a href="#articles">Статьи</a>
+                    <a href="#hardware">Видеокарты</a>
+                    <a href="#about">О проекте</a>
+                </nav>
+                <div class="footer-author">
+                    <span>PROJECT EDITOR</span>
+                    <strong>Некий Виктор Б.</strong>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>GPU INSIDER © 2026</span>
+                <span>POWERED BY CURIOSITY.</span>
+                <a href="#">BACK TO TOP ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
