@@ -1096,3 +1096,109 @@ a {
         height: 52px;
     }
 }
+
+
+/* ============================================
+   16. ЛОГОТИПЫ ПРОИЗВОДИТЕЛЕЙ
+   Логотипы лежат в assets/images/manufacturers/
+============================================ */
+
+.manufacturer-logo-wrapper {
+    width: 100%;
+    height: 230px;
+    padding: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at center, rgba(255,255,255,.045), transparent 68%),
+        #17191e;
+    overflow: hidden;
+}
+
+.manufacturer-logo-wrapper img {
+    display: none;
+    max-width: 78%;
+    max-height: 72%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1) brightness(1.65);
+    opacity: .92;
+    transition: transform .35s ease, filter .35s ease, opacity .35s ease;
+}
+
+.manufacturer-card:hover .manufacturer-logo-wrapper img {
+    transform: scale(1.06);
+    filter: none;
+    opacity: 1;
+}
+
+.manufacturer-logo-fallback {
+    display: block;
+    color: var(--text);
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+@media (max-width: 550px) {
+    .manufacturer-logo-wrapper {
+        height: 190px;
+    }
+}
+
+/* 17. ШАБЛОН ПОДРОБНОЙ КАРТОЧКИ */
+.board-card-specs{display:grid;gap:8px;margin:16px 0}
+.board-card-spec{display:flex;justify-content:space-between;gap:12px;font-size:12px;border-bottom:1px solid var(--border);padding-bottom:7px}
+.board-card-spec span{color:var(--muted)}
+.board-card-spec strong{text-align:right;font-weight:600}
+.board-card-more{display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;margin-top:12px;min-height:38px;padding:0 20px;border:1px solid var(--accent);border-radius:5px;background:var(--accent);color:#111;font:800 11px/1 Manrope,sans-serif;letter-spacing:1px;cursor:pointer;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}.board-card-more::after{content:" →";margin-left:7px}.board-card-more:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 5px 18px rgba(255,140,40,.22)}.board-card-more:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.detail-hero{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:center;margin:28px 0}
+.detail-hero>.gpu-image-wrapper{min-height:340px}
+.detail-intro p{color:var(--muted);line-height:1.8}
+.detail-highlights{padding-left:20px;margin-top:18px;line-height:1.9}
+.detail-quick-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0 38px}
+.detail-quick-item{background:#202228;border:1px solid var(--border);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.detail-quick-item span{color:var(--muted);font-size:11px}
+.detail-quick-item strong{font-size:15px}
+.detail-section{margin:34px 0}
+.detail-section>h4{font-size:13px;letter-spacing:1.3px;margin-bottom:17px}
+.detail-spec-table{border-top:1px solid var(--border)}
+.detail-spec-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:13px 15px;border-bottom:1px solid var(--border)}
+.detail-spec-row:nth-child(odd){background:rgba(255,255,255,.025)}
+.detail-spec-row span{color:var(--muted);font-size:13px}
+.detail-spec-row strong{font-size:13px;text-align:right}
+.detail-feature-list{color:var(--muted);line-height:2;padding-left:20px}
+.detail-source-note{color:var(--muted);font-size:11px;line-height:1.6;margin-top:28px}
+.gallery-clickable{cursor:zoom-in}
+.image-viewer{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center;padding:60px 80px}
+.image-viewer>img{max-width:min(100%,1200px);max-height:85vh;object-fit:contain}
+.image-viewer button{position:absolute;border:0;color:white;background:rgba(255,255,255,.12);cursor:pointer}
+.image-viewer-close{top:22px;right:28px;width:44px;height:44px;border-radius:50%;font-size:30px}
+.image-viewer-arrow{top:50%;transform:translateY(-50%);width:48px;height:64px;border-radius:8px;font-size:42px}
+.image-viewer-prev{left:22px}.image-viewer-next{right:22px}
+.image-viewer-counter{position:absolute;bottom:22px;color:white;font-size:13px}
+@media(max-width:850px){.detail-hero{grid-template-columns:1fr}.detail-quick-specs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:550px){.detail-quick-specs{grid-template-columns:1fr 1fr}.detail-spec-row{grid-template-columns:1fr;gap:5px}.detail-spec-row strong{text-align:left}.image-viewer{padding:55px 12px}.image-viewer-arrow{width:38px}.image-viewer-prev{left:5px}.image-viewer-next{right:5px}}
+
+/* Акцентные цвета каталога и кнопки подробной страницы */
+.board-card-more { color: #101114; border-color: var(--accent); }
+.board-more-nvidia { --card-accent: #76b900; background: #76b900; border-color: #76b900; box-shadow: 0 4px 16px rgba(118,185,0,.12); }
+.board-more-amd { --card-accent: #ed1c24; background: #ed1c24; border-color: #ed1c24; color: #fff; box-shadow: 0 4px 16px rgba(237,28,36,.14); }
+.board-more-nvidia:hover { box-shadow: 0 6px 22px rgba(118,185,0,.3); }
+.board-more-amd:hover { box-shadow: 0 6px 22px rgba(237,28,36,.3); }
+.detail-theme-nvidia { --detail-accent: #76b900; }
+.detail-theme-amd { --detail-accent: #ed1c24; }
+.detail-theme-nvidia .detail-intro h4,
+.detail-theme-nvidia .detail-section h4 { border-left-color: #76b900; }
+.detail-theme-amd .detail-intro h4,
+.detail-theme-amd .detail-section h4 { border-left-color: #ed1c24; }
+.detail-accent-nvidia { border-color: #76b900; color: #9bd63a; }
+.detail-accent-amd { border-color: #ed1c24; color: #ff666b; }
+.detail-overview-text { color: var(--muted); line-height: 1.85; font-size: 14px; }
+.detail-sources-list { display: grid; gap: 10px; padding-left: 18px; }
+.detail-sources-list a { color: var(--detail-accent, var(--accent)); text-decoration: underline; text-underline-offset: 3px; }
+.detail-sources-list a:hover { filter: brightness(1.25); }
+.detail-section > h4 { border-left: 3px solid var(--detail-accent, var(--accent)); padding-left: 12px; }

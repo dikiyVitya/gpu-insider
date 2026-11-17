@@ -1,4 +1,3 @@
-
 {
   "families": [
     {
@@ -10,14 +9,153 @@
           "name": "16 Series",
           "models": [
             {
+              "id": "gtx-1660",
+              "name": "GeForce GTX 1660",
+              "manufacturer": "NVIDIA",
+              "architecture": "Turing",
+              "memory": "6 GB GDDR5",
+              "description": "GeForce GTX 1660 — видеокарта среднего игрового сегмента поколения Turing с 6 ГБ GDDR5.",
+              "boards": [
+                {
+                  "id": "msi-ventus-xs",
+                  "manufacturer": "MSI",
+                  "edition": "Ventus XS 6G",
+                  "fullName": "MSI GeForce GTX 1660 Ventus XS 6G",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660/msi/msi-ventus-xs/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Компактная двухвентиляторная версия Ventus XS с 6 ГБ GDDR5.",
+                  "boostClock": "1785 МГц",
+                  "memoryClock": "8 Гбит/с",
+                  "power": "120 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "204 × 128 × 42 мм",
+                  "slots": "2 слота",
+                  "cooling": "MSI VENTUS XS",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-VENTUS-XS-6G/Specification"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-VENTUS-XS-6G/Specification",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "msi-ventus-xs-oc",
+                  "manufacturer": "MSI",
+                  "edition": "Ventus XS 6G OC",
+                  "fullName": "MSI GeForce GTX 1660 Ventus XS 6G OC",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660/msi/msi-ventus-xs-oc/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Заводская OC-версия компактного исполнения Ventus XS.",
+                  "boostClock": "1830 МГц",
+                  "memoryClock": "8 Гбит/с",
+                  "power": "130 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "204 × 128 × 42 мм",
+                  "slots": "2 слота",
+                  "cooling": "MSI VENTUS XS",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-VENTUS-XS-6G-OC/Specification"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-VENTUS-XS-6G-OC/Specification",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "gigabyte-oc-6g",
+                  "manufacturer": "Gigabyte",
+                  "edition": "OC 6G",
+                  "fullName": "Gigabyte GeForce GTX 1660 OC 6G",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660/gigabyte/gigabyte-oc-6g/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Двухвентиляторное исполнение с системой WINDFORCE 2X и защитной пластиной.",
+                  "boostClock": "1830 МГц",
+                  "memoryClock": "8 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "224 × 121 × 40 мм",
+                  "slots": "2 слота",
+                  "cooling": "WINDFORCE 2X",
+                  "coolingFeatures": [
+                    "Два 90-мм вентилятора",
+                    "WINDFORCE 2X",
+                    "Защитная пластина"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gigabyte.com/uk/Graphics-Card/GV-N1660OC-6GD/sp"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gigabyte.com/uk/Graphics-Card/GV-N1660OC-6GD/sp",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                }
+              ],
+              "releaseDate": "14 марта 2019 года",
+              "chip": "TU116",
+              "process": "12 нм",
+              "cudaCores": 1408,
+              "memoryBus": "192 бит",
+              "memoryBandwidth": "192 ГБ/с",
+              "directX": "12",
+              "api": "DirectX 12, Vulkan, OpenGL 4.6",
+              "gpuDescription": "GTX 1660 построена на графическом процессоре TU116 архитектуры Turing. Она оснащена 1408 ядрами CUDA и 6 ГБ GDDR5 с 192-битной шиной. В отличие от GTX 1660 SUPER и GTX 1660 Ti, использует память GDDR5.",
+              "gpuHighlights": [
+                "Архитектура Turing",
+                "6 ГБ GDDR5",
+                "1408 ядер CUDA",
+                "192-битная шина памяти"
+              ],
+              "baseClock": "1530 МГц",
+              "referenceBoostClock": "1785 МГц",
+              "memorySpeed": "8 Гбит/с",
+              "sources": [
+                {
+                  "label": "NVIDIA — сравнение GeForce GTX 16 Series",
+                  "url": "https://www.nvidia.com/en-gb/geforce/graphics-cards/compare/"
+                },
+                {
+                  "label": "MSI — GTX 1660 Ventus XS",
+                  "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-VENTUS-XS-6G/Specification"
+                }
+              ]
+            },
+            {
               "id": "gtx-1660-super",
               "name": "GeForce GTX 1660 SUPER",
               "manufacturer": "NVIDIA",
               "architecture": "Turing",
               "memory": "6 GB GDDR6",
-
-              "description": "NVIDIA GeForce GTX 1660 SUPER — игровая видеокарта на архитектуре Turing.",
-
+              "description": "GeForce GTX 1660 SUPER — версия GTX 1660 с более быстрой памятью GDDR6.",
               "boards": [
                 {
                   "id": "msi-gaming-x",
@@ -25,55 +163,592 @@
                   "edition": "Gaming X",
                   "fullName": "MSI GeForce GTX 1660 SUPER Gaming X",
                   "fans": 2,
-                    "images": {
-                    "main": "assets/images/gpu/gtx/1660-super/msi/gaming-x/front.webp",
-                    "gallery": [
-                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/front.webp",
-                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/back.webp",
-                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/left.webp",
-                        "assets/images/gpu/gtx/1660-super/msi/gaming-x/box.webp"
-                    ]
-                    },
-                  "description": "Исполнение Gaming X от MSI с фирменной системой охлаждения."
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/msi/msi-gaming-x/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Исполнение Gaming X с двухвентиляторным кулером TWIN FROZR 7, заводским разгоном и фирменной системой охлаждения MSI.",
+                  "boostClock": "1830 МГц",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "125 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "247 × 127 × 46 мм",
+                  "slots": "2 слота",
+                  "cooling": "MSI TWIN FROZR 7",
+                  "coolingFeatures": [
+                    "Два вентилятора TORX FAN 3.0",
+                    "Zero Frozr — остановка вентиляторов при низкой нагрузке",
+                    "Металлический бэкплейт"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-SUPER-GAMING-X/Specification"
+                    }
+                  ],
+                  "boardHighlights": [
+                    "Заводской Boost до 1830 МГц",
+                    "Двухвентиляторная система TWIN FROZR 7",
+                    "Технология Zero Frozr"
+                  ],
+                  "photoSourcePage": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-SUPER-GAMING-X/Specification",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
                 },
-
                 {
-                  "id": "msi-ventus-xs",
+                  "id": "msi-ventus-xs-oc",
                   "manufacturer": "MSI",
                   "edition": "Ventus XS OC",
                   "fullName": "MSI GeForce GTX 1660 SUPER Ventus XS OC",
                   "fans": 2,
                   "images": {
-                    "main": "assets/images/gpu/gtx/1660-super/msi/ventus-xs-front.webp",
+                    "main": "assets/images/gpu/gtx/1660-super/msi/msi-ventus-xs-oc/front.webp",
                     "gallery": []
                   },
-                  "description": "Компактное исполнение Ventus XS OC."
+                  "description": "Компактное исполнение Ventus XS OC с двумя вентиляторами.",
+                  "boostClock": "1815 МГц",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "125 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4a; 1 × HDMI 2.0b",
+                  "dimensions": "204 × 128 × 42 мм",
+                  "slots": "2 слота",
+                  "cooling": "MSI VENTUS XS",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-SUPER-VENTUS-XS-OC/Specification"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-SUPER-VENTUS-XS-OC/Specification",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
                 },
-
                 {
-                  "id": "asus-dual-evo",
+                  "id": "asus-dual-evo-oc",
                   "manufacturer": "ASUS",
                   "edition": "Dual EVO OC",
                   "fullName": "ASUS Dual GeForce GTX 1660 SUPER EVO OC",
                   "fans": 2,
                   "images": {
-                    "main": "assets/images/gpu/gtx/1660-super/asus/dual-evo-front.webp",
+                    "main": "assets/images/gpu/gtx/1660-super/asus/asus-dual-evo-oc/front.webp",
                     "gallery": []
                   },
-                  "description": "Исполнение Dual EVO OC от ASUS."
+                  "description": "Двухвентиляторное исполнение ASUS Dual EVO OC с режимами Gaming и OC.",
+                  "boostClock": "1830 МГц (OC) / 1800 МГц (Gaming)",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "1 × DVI-D; 1 × HDMI 2.0b; 1 × DisplayPort 1.4",
+                  "dimensions": "242 × 130 × 53 мм",
+                  "slots": "2,7 слота",
+                  "cooling": "ASUS Dual / DirectCU II",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.asus.com/uk/motherboards-components/graphics-cards/all-series/dual-gtx1660s-a6g-evo/techspec/"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.asus.com/uk/motherboards-components/graphics-cards/all-series/dual-gtx1660s-a6g-evo/techspec/",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
                 },
-
                 {
                   "id": "gigabyte-gaming-oc",
                   "manufacturer": "Gigabyte",
-                  "edition": "Gaming OC",
+                  "edition": "Gaming OC 6G",
                   "fullName": "Gigabyte GeForce GTX 1660 SUPER Gaming OC 6G",
                   "fans": 3,
                   "images": {
-                    "main": "assets/images/gpu/gtx/1660-super/gigabyte/gaming-oc-front.webp",
+                    "main": "assets/images/gpu/gtx/1660-super/gigabyte/gigabyte-gaming-oc/front.webp",
                     "gallery": []
                   },
-                  "description": "Трёхвентиляторное исполнение Gaming OC."
+                  "description": "Трёхвентиляторная версия Gaming OC с охлаждением WINDFORCE 3X и металлической защитной пластиной.",
+                  "boostClock": "1860 МГц",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "280 × 116,7 × 40,4 мм",
+                  "slots": "2 слота",
+                  "cooling": "WINDFORCE 3X",
+                  "coolingFeatures": [
+                    "WINDFORCE 3X с чередующимся вращением вентиляторов",
+                    "Защитная пластина на обратной стороне"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gigabyte.com/eu/Graphics-Card/GV-N166SGAMING-OC-6GD/sp"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gigabyte.com/eu/Graphics-Card/GV-N166SGAMING-OC-6GD/sp",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "gigabyte-oc-6g",
+                  "manufacturer": "Gigabyte",
+                  "edition": "OC 6G",
+                  "fullName": "Gigabyte GeForce GTX 1660 SUPER OC 6G",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/gigabyte/gigabyte-oc-6g/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Двухвентиляторная версия с системой охлаждения WINDFORCE 2X.",
+                  "boostClock": "1830 МГц",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "225,65 × 122,02 × 40,5 мм",
+                  "slots": "2 слота",
+                  "cooling": "WINDFORCE 2X",
+                  "coolingFeatures": [
+                    "Два 90-мм вентилятора",
+                    "Чередующееся вращение вентиляторов",
+                    "Защитная пластина"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gigabyte.com/Graphics-Card/GV-N166SOC-6GD/sp"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gigabyte.com/Graphics-Card/GV-N166SOC-6GD/sp",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "palit-stormx",
+                  "manufacturer": "Palit",
+                  "edition": "StormX",
+                  "fullName": "Palit GeForce GTX 1660 SUPER StormX",
+                  "fans": 1,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/palit/palit-stormx/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Компактная версия StormX формата Mini-ITX с одним 100-мм вентилятором и двумя тепловыми трубками.",
+                  "boostClock": "1785 МГц",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "125 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "1 × DisplayPort 1.4; 1 × HDMI 2.0b; 1 × DVI-D",
+                  "dimensions": "168 × 122 × 40 мм",
+                  "slots": "2 слота",
+                  "cooling": "Palit StormX",
+                  "coolingFeatures": [
+                    "100-мм вентилятор",
+                    "Две тепловые трубки диаметром 6 мм",
+                    "Компактный формат Mini-ITX"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://palit.pressium.pl/pobierz-plik/Palit_GTX1660_SUPER_STORMX_Datasheed.pdf/59064"
+                    }
+                  ],
+                  "photoSourcePage": "https://palit.pressium.pl/pobierz-plik/Palit_GTX1660_SUPER_STORMX_Datasheed.pdf/59064",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "gainward-ghost",
+                  "manufacturer": "Gainward",
+                  "edition": "Ghost",
+                  "fullName": "Gainward GeForce GTX 1660 SUPER Ghost",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/gainward/gainward-ghost/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Двухвентиляторное исполнение Ghost с базовой частотой Boost 1785 МГц.",
+                  "boostClock": "1785 МГц",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "125 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "1 × DisplayPort 1.4; 1 × HDMI 2.0b; 1 × DVI-D",
+                  "dimensions": "235 × 115 мм",
+                  "slots": "2 слота",
+                  "cooling": "Gainward Ghost",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gainward.com/main/product/vga/pro/p01071/p01071_datasheet_13345facea9d1815c.pdf?s=160"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gainward.com/main/product/vga/pro/p01071/p01071_datasheet_13345facea9d1815c.pdf?s=160",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "gainward-ghost-oc",
+                  "manufacturer": "Gainward",
+                  "edition": "Ghost OC",
+                  "fullName": "Gainward GeForce GTX 1660 SUPER Ghost OC",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-super/gainward/gainward-ghost-oc/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Заводская OC-версия Ghost с повышенной частотой Boost 1830 МГц.",
+                  "boostClock": "1830 МГц",
+                  "memoryClock": "14 Гбит/с",
+                  "power": "125 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "1 × DisplayPort 1.4; 1 × HDMI 2.0b; 1 × DVI-D",
+                  "dimensions": "235 × 115 мм (плата); 2 слота",
+                  "slots": "2 слота",
+                  "cooling": "Gainward Ghost",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gainward.com/main/product/vga/pro/p01110/p01110_datasheet_5886017c92a6911c.pdf?s=936"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gainward.com/main/product/vga/pro/p01110/p01110_datasheet_5886017c92a6911c.pdf?s=936",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                }
+              ],
+              "releaseDate": "29 октября 2019 года",
+              "chip": "TU116-300",
+              "process": "12 нм",
+              "cudaCores": 1408,
+              "memoryBus": "192 бит",
+              "memoryBandwidth": "336 ГБ/с",
+              "directX": "12",
+              "api": "DirectX 12, Vulkan, OpenGL 4.6",
+              "gpuDescription": "GTX 1660 SUPER использует TU116 архитектуры Turing, 1408 ядер CUDA и 6 ГБ GDDR6. Переход на GDDR6 повысил пропускную способность памяти до 336 ГБ/с относительно GTX 1660.",
+              "gpuHighlights": [
+                "Архитектура Turing",
+                "6 ГБ GDDR6",
+                "1408 ядер CUDA",
+                "Пропускная способность памяти 336 ГБ/с"
+              ],
+              "baseClock": "1530 МГц",
+              "referenceBoostClock": "1785 МГц",
+              "memorySpeed": "14 Гбит/с",
+              "sources": [
+                {
+                  "label": "NVIDIA — GTX 16 Series: характеристики",
+                  "url": "https://www.nvidia.com/en-gb/geforce/graphics-cards/compare/"
+                },
+                {
+                  "label": "NVIDIA — анонс GTX 1660 SUPER",
+                  "url": "https://nvidianews.nvidia.com/news/a-hero-for-every-gamer-nvidia-introduces-new-geforce-gtx-super-series"
+                }
+              ]
+            },
+            {
+              "id": "gtx-1660-ti",
+              "name": "GeForce GTX 1660 Ti",
+              "manufacturer": "NVIDIA",
+              "architecture": "Turing",
+              "memory": "6 GB GDDR6",
+              "description": "GeForce GTX 1660 Ti — старшая из трёх рассматриваемых моделей GTX 1660, оснащённая 1536 ядрами CUDA.",
+              "boards": [
+                {
+                  "id": "msi-gaming-x",
+                  "manufacturer": "MSI",
+                  "edition": "Gaming X 6G",
+                  "fullName": "MSI GeForce GTX 1660 Ti Gaming X 6G",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-ti/msi/msi-gaming-x/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Исполнение Gaming X с системой охлаждения TWIN FROZR 7 и заводским разгоном.",
+                  "boostClock": "1875 МГц",
+                  "memoryClock": "12 Гбит/с",
+                  "power": "130 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4a; 1 × HDMI 2.0b",
+                  "dimensions": "247 × 127 × 46 мм",
+                  "slots": "2 слота",
+                  "cooling": "MSI TWIN FROZR 7",
+                  "coolingFeatures": [
+                    "Два вентилятора TORX FAN 3.0",
+                    "Zero Frozr",
+                    "Металлический бэкплейт"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-Ti-GAMING-X-6G/Specification"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-Ti-GAMING-X-6G/Specification",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "msi-ventus-xs-oc",
+                  "manufacturer": "MSI",
+                  "edition": "Ventus XS 6G OC",
+                  "fullName": "MSI GeForce GTX 1660 Ti Ventus XS 6G OC",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-ti/msi/msi-ventus-xs-oc/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Компактная двухвентиляторная версия Ventus XS с заводским разгоном.",
+                  "boostClock": "1830 МГц",
+                  "memoryClock": "12 Гбит/с",
+                  "power": "120 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4a; 1 × HDMI 2.0b",
+                  "dimensions": "204 × 128 × 42 мм",
+                  "slots": "2 слота",
+                  "cooling": "MSI VENTUS XS",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-Ti-VENTUS-XS-6G-OC/Specification"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-Ti-VENTUS-XS-6G-OC/Specification",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "asus-dual-evo",
+                  "manufacturer": "ASUS",
+                  "edition": "Dual EVO",
+                  "fullName": "ASUS Dual GeForce GTX 1660 Ti EVO",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-ti/asus/asus-dual-evo/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Двухвентиляторное исполнение ASUS Dual EVO с режимами Gaming и OC.",
+                  "boostClock": "1815 МГц (OC) / 1785 МГц (Gaming)",
+                  "memoryClock": "12 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "1 × DVI-D; 2 × HDMI 2.0b; 1 × DisplayPort 1.4",
+                  "dimensions": "242 × 130 × 53 мм",
+                  "slots": "2,7 слота",
+                  "cooling": "ASUS Dual",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.asus.com/motherboards-components/graphics-cards/dual/dual-gtx1660ti-a6g-evo/techspec/"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.asus.com/motherboards-components/graphics-cards/dual/dual-gtx1660ti-a6g-evo/techspec/",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "asus-tuf-evo-oc",
+                  "manufacturer": "ASUS",
+                  "edition": "TUF Gaming EVO OC",
+                  "fullName": "ASUS TUF Gaming GeForce GTX 1660 Ti EVO OC Edition",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-ti/asus/asus-tuf-evo-oc/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Исполнение TUF Gaming EVO OC с Boost до 1845 МГц в режиме OC.",
+                  "boostClock": "1845 МГц (OC) / 1815 МГц (Gaming)",
+                  "memoryClock": "12 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "Уточняется",
+                  "recommendedPsu": "Уточняется",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "Уточняется",
+                  "dimensions": "Уточняется",
+                  "slots": "2,3 слота",
+                  "cooling": "ASUS TUF Gaming",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.asus.com/uk/motherboards-components/graphics-cards/tuf-gaming/tuf-gtx1660ti-o6g-evo-gaming/techspec/"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.asus.com/uk/motherboards-components/graphics-cards/tuf-gaming/tuf-gtx1660ti-o6g-evo-gaming/techspec/",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "gigabyte-gaming-oc",
+                  "manufacturer": "Gigabyte",
+                  "edition": "Gaming OC 6G",
+                  "fullName": "Gigabyte GeForce GTX 1660 Ti Gaming OC 6G",
+                  "fans": 3,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-ti/gigabyte/gigabyte-gaming-oc/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Трёхвентиляторная версия Gaming OC с охлаждением WINDFORCE 3X.",
+                  "boostClock": "1860 МГц",
+                  "memoryClock": "12 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "280 × 116,7 × 40,4 мм",
+                  "slots": "2 слота",
+                  "cooling": "WINDFORCE 3X",
+                  "coolingFeatures": [
+                    "WINDFORCE 3X",
+                    "Чередующееся вращение вентиляторов",
+                    "Защитная пластина"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gigabyte.com/eu/Graphics-Card/GV-N166TGAMING-OC-6GD/sp"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gigabyte.com/eu/Graphics-Card/GV-N166TGAMING-OC-6GD/sp",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "gigabyte-oc-6g",
+                  "manufacturer": "Gigabyte",
+                  "edition": "OC 6G",
+                  "fullName": "Gigabyte GeForce GTX 1660 Ti OC 6G",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-ti/gigabyte/gigabyte-oc-6g/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Двухвентиляторная версия с охлаждением WINDFORCE 2X.",
+                  "boostClock": "1800 МГц",
+                  "memoryClock": "12 Гбит/с",
+                  "power": "Уточняется",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "3 × DisplayPort 1.4; 1 × HDMI 2.0b",
+                  "dimensions": "225,65 × 122,02 × 40,5 мм",
+                  "slots": "2 слота",
+                  "cooling": "WINDFORCE 2X",
+                  "coolingFeatures": [
+                    "Два 90-мм вентилятора",
+                    "WINDFORCE 2X",
+                    "Защитная пластина"
+                  ],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gigabyte.com/uk/Graphics-Card/GV-N166TOC-6GD/sp"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gigabyte.com/uk/Graphics-Card/GV-N166TOC-6GD/sp",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                },
+                {
+                  "id": "gainward-ghost",
+                  "manufacturer": "Gainward",
+                  "edition": "Ghost",
+                  "fullName": "Gainward GeForce GTX 1660 Ti Ghost",
+                  "fans": 2,
+                  "images": {
+                    "main": "assets/images/gpu/gtx/1660-ti/gainward/gainward-ghost/front.webp",
+                    "gallery": []
+                  },
+                  "description": "Двухвентиляторное исполнение Ghost с эталонной частотой Boost 1770 МГц.",
+                  "boostClock": "1770 МГц",
+                  "memoryClock": "12 Гбит/с",
+                  "power": "120 Вт",
+                  "powerConnector": "1 × 8-pin",
+                  "recommendedPsu": "450 Вт",
+                  "interface": "PCI Express 3.0 x16",
+                  "outputs": "1 × DisplayPort 1.4; 1 × HDMI 2.0b; 1 × DVI-D",
+                  "dimensions": "235 × 115 мм",
+                  "slots": "2 слота",
+                  "cooling": "Gainward Ghost",
+                  "coolingFeatures": [],
+                  "source": "Официальная спецификация производителя",
+                  "sourceLinks": [
+                    {
+                      "label": "Официальная спецификация / фотоматериалы",
+                      "url": "https://www.gainward.com/main/product/vga/pro/p01143/p01143_datasheet_28861357b76caa84.pdf?s=336"
+                    }
+                  ],
+                  "photoSourcePage": "https://www.gainward.com/main/product/vga/pro/p01143/p01143_datasheet_28861357b76caa84.pdf?s=336",
+                  "photoSourceNote": "На странице производителя/в фирменном datasheet есть изображения исполнения. Скачивай фото оттуда; локальные пути images.main и gallery оставлены для твоих файлов.",
+                  "verification": "Официальная спецификация найдена; характеристики сверены по указанному источнику."
+                }
+              ],
+              "releaseDate": "22 февраля 2019 года",
+              "chip": "TU116-400",
+              "process": "12 нм",
+              "cudaCores": 1536,
+              "memoryBus": "192 бит",
+              "memoryBandwidth": "288 ГБ/с",
+              "directX": "12",
+              "api": "DirectX 12, Vulkan, OpenGL 4.6",
+              "gpuDescription": "GTX 1660 Ti основана на TU116 архитектуры Turing и оснащена 1536 ядрами CUDA. Установлено 6 ГБ GDDR6 с 192-битной шиной и пропускной способностью 288 ГБ/с.",
+              "gpuHighlights": [
+                "Архитектура Turing",
+                "6 ГБ GDDR6",
+                "1536 ядер CUDA",
+                "192-битная шина памяти"
+              ],
+              "baseClock": "1500 МГц",
+              "referenceBoostClock": "1770 МГц",
+              "memorySpeed": "12 Гбит/с",
+              "sources": [
+                {
+                  "label": "NVIDIA — GTX 16 Series: характеристики",
+                  "url": "https://www.nvidia.com/en-gb/geforce/graphics-cards/compare/"
+                },
+                {
+                  "label": "MSI — GTX 1660 Ti Gaming X",
+                  "url": "https://www.msi.com/Graphics-Card/GeForce-GTX-1660-Ti-GAMING-X-6G/Specification"
                 }
               ]
             }

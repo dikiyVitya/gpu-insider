@@ -322,6 +322,46 @@ function createGpuImage(path, alt) {
 }
 
 // --------------------------------------------
+// ЛОГОТИПЫ ПРОИЗВОДИТЕЛЕЙ
+// --------------------------------------------
+
+function getManufacturerLogoPath(name) {
+    const logos = {
+        "MSI": "msi.png",
+        "ASUS": "asus.png",
+        "Gigabyte": "gigabyte.png",
+        "GIGABYTE": "gigabyte.png",
+        "Palit": "palit.png",
+        "Gainward": "gainward.png"
+    };
+
+    return `assets/images/manufacturers/${logos[name] || ""}`;
+}
+
+function createManufacturerLogo(name) {
+    const wrapper = createElement("div", "manufacturer-logo-wrapper");
+    const fallback = createElement("span", "manufacturer-logo-fallback", name);
+    const image = document.createElement("img");
+
+    image.alt = `${name} — логотип производителя`;
+    image.loading = "lazy";
+    image.src = getManufacturerLogoPath(name);
+
+    image.onload = () => {
+        image.style.display = "block";
+        fallback.style.display = "none";
+    };
+
+    image.onerror = () => {
+        image.style.display = "none";
+        fallback.style.display = "block";
+    };
+
+    wrapper.append(image, fallback);
+    return wrapper;
+}
+
+// --------------------------------------------
 // КАРТОЧКИ ПРОИЗВОДИТЕЛЕЙ
 // --------------------------------------------
 
@@ -357,11 +397,9 @@ function renderManufacturers(model) {
         const card = createElement("button", "manufacturer-card");
         card.type = "button";
 
-        const firstBoard = boards[0];
-        card.appendChild(createGpuImage(
-            firstBoard.images?.main,
-            firstBoard.fullName
-        ));
+        // На уровне производителя показываем логотип бренда,
+        // а фотографии видеокарт оставляем для следующего уровня.
+        card.appendChild(createManufacturerLogo(name));
 
         const info = createElement("div", "manufacturer-info");
         info.appendChild(createElement("h4", "", name));
@@ -416,17 +454,29 @@ function renderBoards(model, manufacturer, boards) {
     const grid = createElement("div", "board-grid");
 
     boards.forEach(board => {
-        const card = createElement("button", "board-card");
-        card.type = "button";
+        const card = createElement("article", "board-card");
         card.appendChild(createGpuImage(board.images?.main, board.fullName));
 
         const info = createElement("div", "board-info");
         info.appendChild(createElement("h4", "", board.edition));
-        info.appendChild(createElement("p", "", `${board.fans ?? "—"} вентилятора`));
-        info.appendChild(createElement("span", "", "ПОДРОБНЕЕ →"));
+        const summary = createElement("div", "board-card-specs");
+        [
+            ["Память", model.memory || "—"],
+            ["Вентиляторы", board.fans != null ? `${board.fans} шт.` : "—"],
+            ["Boost", board.boostClock || "Уточняется"],
+            ["Шина памяти", model.memoryBus || "—"],
+            ["Интерфейс", board.interface || "—"]
+        ].forEach(([label, value]) => {
+            const line = createElement("div", "board-card-spec");
+            line.append(createElement("span", "", label), createElement("strong", "", value));
+            summary.appendChild(line);
+        });
+        info.appendChild(summary);
+        const moreButton = createElement("button", `board-card-more board-more-${selectedVendor || "nvidia"}`, "ПОДРОБНЕЕ");
+        moreButton.type = "button";
+        moreButton.addEventListener("click", () => renderBoardDetails(model, board));
+        info.appendChild(moreButton);
         card.appendChild(info);
-
-        card.addEventListener("click", () => renderBoardDetails(model, board));
         grid.appendChild(card);
     });
 
@@ -439,50 +489,155 @@ function renderBoards(model, manufacturer, boards) {
 
 function renderBoardDetails(model, board) {
     result.innerHTML = "";
-
-    const backButton = createElement(
-        "button",
-        "catalog-back",
-        "← НАЗАД К ИСПОЛНЕНИЯМ"
-    );
+    const backButton = createElement("button", `catalog-back detail-accent-${selectedVendor || "nvidia"}`, "← НАЗАД К ИСПОЛНЕНИЯМ");
     backButton.addEventListener("click", () => {
-        const boards = (model.boards || []).filter(
-            item => item.manufacturer === board.manufacturer
-        );
-        renderBoards(model, board.manufacturer, boards);
+        renderBoards(model, board.manufacturer,
+            (model.boards || []).filter(item => item.manufacturer === board.manufacturer));
     });
     result.appendChild(backButton);
-
-    result.appendChild(createElement(
-        "span",
-        "gpu-result-number",
-        `GPU / ${board.manufacturer}`
-    ));
+    result.appendChild(createElement("span", "gpu-result-number", `${model.name} / ${board.manufacturer}`));
     result.appendChild(createElement("h3", "catalog-subheading", board.fullName));
 
-    const details = createElement("div", "board-details");
-    details.appendChild(createGpuImage(board.images?.main, board.fullName));
+    const hero = createElement("div", `detail-hero detail-theme-${selectedVendor || "nvidia"}`);
+    hero.appendChild(createGpuImage(board.images?.main, board.fullName));
+    const intro = createElement("div", "detail-intro");
+    intro.appendChild(createElement("p", "", board.description || model.description || "Описание пока не добавлено."));
+    const highlights = createElement("ul", "detail-highlights");
+    (board.boardHighlights || model.gpuHighlights || []).forEach(x => highlights.appendChild(createElement("li", "", x)));
+    intro.appendChild(highlights);
+    hero.appendChild(intro);
+    result.appendChild(hero);
 
-    const info = createElement("div", "board-details-info");
-    info.appendChild(createElement("h4", "", board.edition));
-    info.appendChild(createElement("p", "", board.description || "Описание пока не добавлено."));
-    info.appendChild(createElement("p", "", `Количество вентиляторов: ${board.fans ?? "—"}`));
-    info.appendChild(createElement("p", "", `Память: ${model.memory || "—"}`));
-    info.appendChild(createElement("p", "", `Архитектура: ${model.architecture || "—"}`));
-    details.appendChild(info);
-    result.appendChild(details);
+    const quick = createElement("div", "detail-quick-specs");
+    [
+      ["Видеопамять", model.memory || "—"],
+      ["Вентиляторы", board.fans != null ? `${board.fans} шт.` : "—"],
+      ["Boost", board.boostClock || "Уточняется"],
+      ["Шина памяти", model.memoryBus || "—"],
+      ["Видеовыходы", board.outputs || "Уточняются"],
+      ["Интерфейс", board.interface || "—"]
+    ].forEach(([label,value]) => {
+      const item=createElement("div","detail-quick-item");
+      item.append(createElement("span","",label),createElement("strong","",value));
+      quick.appendChild(item);
+    });
+    result.appendChild(quick);
 
-    const galleryImages = board.images?.gallery || [];
-    if (galleryImages.length > 0) {
-        const gallery = createElement("div", "board-gallery");
-        galleryImages.forEach(path => {
-            gallery.appendChild(createGpuImage(path, board.fullName));
-        });
-        result.appendChild(gallery);
+    const galleryImages=board.images?.gallery || [];
+    if(galleryImages.length){
+      const section=createElement("section","detail-section");
+      section.appendChild(createElement("h4","","ФОТОГАЛЕРЕЯ"));
+      const gallery=createElement("div","board-gallery");
+      galleryImages.forEach((path,index)=>{
+        const image=createGpuImage(path,board.images?.galleryLabels?.[index] || board.fullName);
+        image.classList.add("gallery-clickable");
+        image.addEventListener("click",()=>openImageViewer(galleryImages,index,board));
+        gallery.appendChild(image);
+      });
+      section.appendChild(gallery); result.appendChild(section);
     }
+
+    const gpuRows=[
+      ["Графический процессор",model.chip || "—"],["Архитектура",model.architecture || "—"],
+      ["Техпроцесс",model.process || "—"],["CUDA-ядер",model.cudaCores ?? "—"],
+      ["Видеопамять",model.memory || "—"],["Шина памяти",model.memoryBus || "—"],
+      ["Пропускная способность",model.memoryBandwidth || "—"],["Дата выхода",model.releaseDate || "—"],
+      ["API",model.api || "—"]
+    ];
+    const boardRows=[
+      ["Boost-частота",board.boostClock || "Уточняется"],["Частота памяти",board.memoryClock || "Уточняется"],
+      ["Интерфейс",board.interface || "Уточняется"],["Видеовыходы",board.outputs || "Уточняется"],
+      ["Энергопотребление",board.power || "Уточняется"],["Разъём питания",board.powerConnector || "Уточняется"],
+      ["Рекомендуемый БП",board.recommendedPsu || "Уточняется"],["Габариты",board.dimensions || "Уточняется"],
+      ["Толщина",board.slots || "Уточняется"],["Система охлаждения",board.cooling || "Уточняется"]
+    ];
+    result.appendChild(createSpecsSection("ХАРАКТЕРИСТИКИ ГРАФИЧЕСКОГО ПРОЦЕССОРА",gpuRows));
+    result.appendChild(createSpecsSection("ХАРАКТЕРИСТИКИ ИСПОЛНЕНИЯ",boardRows));
+    if(board.coolingFeatures?.length){
+      const section=createElement("section","detail-section");
+      section.appendChild(createElement("h4","","ОСОБЕННОСТИ ОХЛАЖДЕНИЯ"));
+      const list=createElement("ul","detail-feature-list");
+      board.coolingFeatures.forEach(x=>list.appendChild(createElement("li","",x)));
+      section.appendChild(list); result.appendChild(section);
+    }
+    // Развёрнутое описание самой модели GPU — общие сведения не дублируют данные платы.
+    const overview = createElement("section", "detail-section");
+    overview.appendChild(createElement("h4", "", "О ВИДЕОКАРТЕ"));
+    overview.appendChild(createElement("p", "detail-overview-text", model.gpuDescription || model.description || "Описание будет добавлено."));
+    result.appendChild(overview);
+
+    const extraRows = [
+      ["Базовая частота GPU (референс)", model.baseClock || "Нет подтверждённых данных"],
+      ["Boost-частота GPU (референс)", model.referenceBoostClock || "Нет подтверждённых данных"],
+      ["Скорость памяти", model.memorySpeed || "Нет подтверждённых данных"],
+      ["Дата выхода", model.releaseDate || "Нет подтверждённых данных"]
+    ];
+    result.appendChild(createSpecsSection("ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ О GPU", extraRows));
+
+    if (Array.isArray(model.sources) && model.sources.length) {
+      result.appendChild(createSourcesSection("ИСТОЧНИКИ ПО ГРАФИЧЕСКОМУ ПРОЦЕССОРУ", model.sources));
+    }
+    if (Array.isArray(board.sourceLinks) && board.sourceLinks.length) {
+      result.appendChild(createSourcesSection("ИСТОЧНИКИ ПО ИСПОЛНЕНИЮ", board.sourceLinks));
+    }
+    result.appendChild(createElement("p", "detail-source-note",
+      `Проверено по: ${board.source || "источники не указаны"}. Характеристики, которые не удалось подтвердить для конкретного исполнения, помечены «Уточняется».`));
 }
 
-// --------------------------------------------
+function createSpecsSection(title, rows) {
+    const section=createElement("section","detail-section");
+    section.appendChild(createElement("h4","",title));
+    const table=createElement("div","detail-spec-table");
+    rows.forEach(([label,value])=>{
+      const row=createElement("div","detail-spec-row");
+      row.append(createElement("span","",label),createElement("strong","",String(value)));
+      table.appendChild(row);
+    });
+    section.appendChild(table); return section;
+}
+
+function createSourcesSection(title, sources) {
+    const section = createElement("section", "detail-section");
+    section.appendChild(createElement("h4", "", title));
+    const list = createElement("ul", "detail-sources-list");
+    sources.forEach(source => {
+        const item = document.createElement("li");
+        const link = createElement("a", "", source.label || source.url);
+        link.href = source.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        item.appendChild(link);
+        list.appendChild(item);
+    });
+    section.appendChild(list);
+    return section;
+}
+
+function openImageViewer(images,startIndex,board) {
+    let index=startIndex;
+    const overlay=createElement("div","image-viewer");
+    overlay.setAttribute("role","dialog");
+    overlay.setAttribute("aria-modal","true");
+    const image=document.createElement("img"); image.alt=board.fullName;
+    const close=createElement("button","image-viewer-close","×");
+    const prev=createElement("button","image-viewer-arrow image-viewer-prev","‹");
+    const next=createElement("button","image-viewer-arrow image-viewer-next","›");
+    const counter=createElement("span","image-viewer-counter");
+    const update=()=>{image.src=images[index];counter.textContent=`${index+1} / ${images.length}`;};
+    const cleanup=()=>{overlay.remove();document.removeEventListener("keydown",keys);};
+    const keys=e=>{
+      if(e.key==="Escape")cleanup();
+      if(e.key==="ArrowLeft"){index=(index-1+images.length)%images.length;update();}
+      if(e.key==="ArrowRight"){index=(index+1)%images.length;update();}
+    };
+    close.addEventListener("click",cleanup);
+    prev.addEventListener("click",()=>{index=(index-1+images.length)%images.length;update();});
+    next.addEventListener("click",()=>{index=(index+1)%images.length;update();});
+    overlay.addEventListener("click",e=>{if(e.target===overlay)cleanup();});
+    overlay.append(prev,image,next,close,counter);document.body.appendChild(overlay);
+    document.addEventListener("keydown",keys);update();
+}
+
 // СТАРТ
 // --------------------------------------------
 
